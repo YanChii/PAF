@@ -464,7 +464,7 @@ sub _master_score_exists {
 # returns current timeline of local pg instance (as integer)
 sub _get_local_timeline {
 	
-    my $controldata_rc = _controldata();
+    my $controldata_rc = _controldata_to_ocf();
     if ( $controldata_rc == $OCF_SUCCESS 
 			or $controldata_rc == $OCF_RUNNING_MASTER ) {
 		# Force a checpoint to make sure the controldata shows the very last TL
